@@ -1,0 +1,1 @@
+export default function Loader({count=6}){return <div className="hotel-grid" aria-label="Loading hotels">{Array.from({length:count},(_,i)=><div className="skeleton-card" key={i}><div/><span/><span/><span/></div>)}</div>}

@@ -1,0 +1,1 @@
+import {CloudOff,RefreshCw} from 'lucide-react';export default function ErrorState({message,retry}){return <div className="error-state"><CloudOff/><h2>Looks like the view is cloudy</h2><p>{message}</p><button className="btn" onClick={retry}><RefreshCw/>Try again</button></div>}

@@ -1,0 +1,1 @@
+import {Link} from 'react-router-dom';import {Compass} from 'lucide-react';export default function NotFound(){return <section className="not-found"><div><Compass/><p>404 · OFF THE MAP</p><h1>This path took a detour.</h1><span>The place you’re looking for has packed its bags. Let’s get you somewhere lovely.</span><Link className="btn" to="/">Return home</Link></div></section>}

@@ -1,0 +1,2 @@
+import {useCallback,useEffect,useState} from 'react'; import {getHotels} from '../services/api';
+export default function useHotels(){const [hotels,setHotels]=useState([]),[loading,setLoading]=useState(true),[error,setError]=useState('');const load=useCallback(async()=>{setLoading(true);setError('');try{setHotels(await getHotels())}catch{setError('We couldn’t load the stays right now. Please check your connection and try again.')}finally{setLoading(false)}},[]);useEffect(()=>{load()},[load]);return{hotels,loading,error,retry:load}}
